@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:02:31 +0800] "GET /index.jsp HTTP/1.1" 200 644 http-bio-8080-exec-1 1123
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:02:54 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-3 173
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:02:55 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-5 13
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:16 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-7 6
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:17 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-9 2
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:18 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-8 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:18 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-2 2
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:19 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:19 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-6 2
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:19 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-8 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:19 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-9 2
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:20 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-8 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:20 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:23 +0800] "GET /login?username=username&password=password HTTP/1.1" 200 1802 http-bio-8080-exec-5 4
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:18:03:24 +0800] "GET /WebSocket/chatRoom HTTP/1.1" 404 949 http-bio-8080-exec-6 2
