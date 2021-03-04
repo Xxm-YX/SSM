@@ -1,40 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2021/3/3
-  Time: 17:09
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>ChatRoom</title>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script>
-        var ws = null;
-        var ws_url = "ws://localhost:8080/WebSocket/chatRoom";
+        var ws;
+        var ws_url = "ws://localhost:8080/WebSocket/chatRoom"
 
-        $(function (){
+        $(function () {
             wsConnect();
-
+            $("#send").click(function () {
+                sendMessage();
+            })
         })
 
-        function wsConnect(){
-            if('WebSocket' in window){
-                //连接成功，回调函数生成一个ws对象
-                ws = new WebSocket(ws_url);
-            }else if('MozWebSocket' in window){
+        function wsConnect() {
+            if ('WebSocket' in window) {
+                ws = new WebSocket(ws_url); // 连接成功 回调函数生成一个ws对象(websocket连接)
+            } else if ('MozWebSocket' in window) {
                 ws = new MozWebSocket(ws_url);
-            }else {
+            } else {
                 console.log('Error: WebSocket is not supported by this browser.');
                 return;
             }
 
-            //都是回调函数
-            ws.onopen = function (){
+            // 都是回调函数
+            ws.onopen = function () {
                 console.log('Info: WebSocket connection opened.');
             };
+
             ws.onclose = function () {
                 console.log('Info: WebSocket closed.');
             };
@@ -44,22 +40,20 @@
                 $("#chat_content").append("<p>"+message.data+"</p>");
             };
         }
-
-        function sendMessage(){
+        function sendMessage() {
             var sendMsg = $("#msg").val();
             ws.send(sendMsg);
             $("#msg").val("");
         }
+
     </script>
 </head>
 <body>
-
-<div style="width: 610px;border: 1px solid #000">
-    <h1 align="center">WelCome to chatroom</h1>
-    <div id="chat_content" style="margin: 2px; width: 600px; height: 400px;border:1px solid #000;"></div>
-
-    <input id="msg" placeholder="输入消息..." style="margin: 2px; width: 300px;">
-    <button id="send">发送消息</button>
+<div style="width:610px;border:1px solid #000">
+    <h1 align="center">Welcome to ChatRoom</h1>
+    <div id="chat_content" style="margin: 2px; width: 600px; height: 400px;border:1px solid #000;">
+    </div>
+    <input id="msg" placeholder="输入消息..." style="margin: 2px; width: 300px;"><button id="send">发送消息</button>
 </div>
 </body>
 </html>

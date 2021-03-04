@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@ServerEndpoint("/chatRoom")
+@ServerEndpoint("/WebSocket/chatRoom")
 public class WSServer {
 
     private static final Set<WSServer> connections =
@@ -23,7 +23,7 @@ public class WSServer {
 
     public void sendMsgToAll(String message) throws IOException{
         for (WSServer eve : connections) {
-            eve.session.getAsyncRemote().sendText(message);
+            eve.session.getBasicRemote().sendText(message);
         }
     }
 
